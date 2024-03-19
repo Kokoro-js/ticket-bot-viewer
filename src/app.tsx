@@ -1,8 +1,21 @@
-import { MetaProvider, Title } from '@solidjs/meta'
-import { Router } from '@solidjs/router'
-import { FileRoutes } from '@solidjs/start/router'
-import { onMount, Suspense } from 'solid-js'
-import { ThemeSelector } from '~/components/nav/themeSelect'
+import { ThemeSelector } from '~/components/ThemeSelect'
+import Home from '~/routes'
+import { render } from 'solid-js/web'
+
+const root = document.getElementById('root')
+
+render(
+  () => <Router root={App}>{/*<Route path='/' component={Home} />*/}</Router>,
+  root!,
+)
+
+import { onMount } from 'solid-js'
+import { themeChange } from 'theme-change'
+import { Route, Router } from '@solidjs/router'
+
+onMount(async () => {
+  themeChange(false)
+})
 
 export default function App() {
   return (
@@ -38,16 +51,7 @@ export default function App() {
           </li>
         </ul>
       </div>
-      <Router
-        root={props => (
-          <MetaProvider>
-            <Title>SolidStart - with Vitest</Title>
-            <Suspense>{props.children}</Suspense>
-          </MetaProvider>
-        )}
-      >
-        <FileRoutes />
-      </Router>
+      <Home />
     </>
   )
 }
