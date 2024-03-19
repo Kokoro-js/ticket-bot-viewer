@@ -1,0 +1,61 @@
+{
+  "ticketId": "123456",
+  "asker": "u123",
+  "parameters": {
+    "duration": 171068
+  },
+  "participants": {
+    "u123": {
+      "name": "Alice",
+      "avatarUrl": "https://img.kookapp.cn/avatars/2023-04/9Wg5TBCYZS06j06j.png/ld"
+    },
+    "u456": {
+      "name": "Bob",
+      "avatarUrl": "https://img.kookapp.cn/avatars/2023-02/z1ZUaZVyxD044044.png"
+    }
+  },
+  "timeline": [
+    {
+      "label": "opened",
+      "timestamp": "2024-03-17T10:00:00Z"
+    },
+    {
+      "label": "replied",
+      "timestamp": "2024-03-17T11:00:00Z",
+      "userId": "u123"
+    },
+    {
+      "label": "closed",
+      "timestamp": "2024-03-18T15:00:00Z"
+    }
+  ],
+  "conversation": [
+    {
+      "senderId": "u123",
+      "timestamp": "2024-03-17T11:00:00Z",
+      "content": {
+        "type": "text",
+        "text": "Hello, how can I help you?"
+      }
+    },
+    {
+      "senderId": "u456",
+      "timestamp": "2024-03-17T11:15:00Z",
+      "content": {
+        "type": "image",
+        "url": "https://img.kookapp.cn/avatars/2023-02/WeH3dKcbec0xc0xc.jpg"
+      }
+    },
+    {
+      "senderId": "u123",
+      "timestamp": "2024-03-17T11:20:00Z",
+      "content": {
+        "type": "file",
+        "name": "instructions.pdf",
+        "url": "https://example.com/files/instructions.pdf",
+		"file_type": "pdf",
+		"size": 312343
+      }
+    }
+  ]
+}
