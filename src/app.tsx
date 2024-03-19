@@ -27,7 +27,9 @@ export default function App() {
         <div class='navbar-center hidden lg:flex'>
           <ul class='menu menu-horizontal px-1'>
             <li>
-              <a href='https://github.com/ahdg6/ticket-bot-viewer'>GitHUB</a>
+              <a href='https://github.com/Kokoro-js/ticket-bot-viewer'>
+                GitHUB
+              </a>
             </li>
             <li>
               <a href='https://kook.top/lZcnhU'>Kook</a>
