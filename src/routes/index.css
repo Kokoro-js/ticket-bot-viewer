@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+#sidebar {
+    position: fixed;
+    right: 0;
+    top: 25%;
+    transform: translateY(-50%) translateX(calc(100% - 27px)); /* 假设露出5px */
+    width: 200px; /* 侧边栏的完整宽度 */
+    transition: transform 0.5s ease; /* 平滑过渡效果 */
+    z-index: 1000;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); /* 阴影效果 */
+    overflow: hidden; /* 防止内容溢出侧边栏 */
+    /* 设置内部内容的padding，以便部分内容能够在露出的部分显示 */
+    padding-right: 230px; /* 右侧内边距，调整以确保部分文字内容显示在露出部分 */
+}
+
+#sidebarTrigger {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px; /* 只露出5px作为触发区域 */
+    height: 300px; /* 与侧边栏的高度一致 */
+    z-index: 1001; /* 确保它在侧边栏之上 */
+    cursor: pointer; /* 更改鼠标指针样式，提供视觉反馈 */
+    background-color: transparent; /* 使触发区域透明 */
+}
+
+/* 鼠标悬停时改变侧边栏位置 */
+#sidebar:hover,
+#sidebarTrigger:hover ~ #sidebar {
+    transform: translateY(-50%) translateX(0); /* 展开侧边栏 */
+}
+
+.svg-icon {
+    display: flex; /* Aligns the SVG icon nicely with text */
+    justify-content: center; /* Centers the SVG icon if it's inside a flex container */
+    align-items: center;
+}
+
+.svg-icon {
+    display: flex; /* Aligns the SVG icon nicely with text */
+    justify-content: center; /* Centers the SVG icon if it's inside a flex container */
+    align-items: center;
+}
+
+.svg-icon svg {
+    width: 24px; /* Sets a fixed width for consistency */
+    height: 24px; /* Sets a fixed height for consistency */
+}
